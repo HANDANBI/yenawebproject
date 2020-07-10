@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+<title>book</title>
+<link rel ="stylesheet" href="../css/bootstrap.min.css">
+<link rel ="stylesheet" href="../css/custom.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<img alt="booki" src="bookicon.png" width="30" height="30"/>
+		<a class="navbar-brand" href='/yenawebproject/index.jsp'>북적북적</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-tatget="#navbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	<div id="navbar" class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href='/yenawebproject/index.jsp'>메인</a>
+			</li>
+		</ul>
+	</div>
+	</nav>
+<div id="id01" class="container" >
+		<form action = "/yenawebproject/minsert" method="post">
+		  <div class="jumbotron" style="padding-top: 20px;">
+			<h3 style="text-align : center;">가입해주셔서 감사합니다♥</h3>
+			<div class="container" style=" width: 80%; align-content: center;">
+			<label for="uname"><b>ID</b></label> <br>
+			 	<input style="width: 90%; align-content: center;" class="form-control" type="text" name="id" required/><br/>
+			<label for="psw"><b>Password</b></label><br>
+				<input style="width: 90%; align-content: center;" class="form-control" type="password" name="pw" required/><br/>
+			<label for="name"><b>Name</b></label><br>
+				<input style="width: 90%; align-content: center;" class="form-control" type="text" name="name" required/><br/> 
+			<label for="email"><b>EMAIL</b></label><br>
+				<input style="width: 90%; align-content: center; class="form-control" type="text" name="email"  required/><br/>
+			<button type="submit" class="btn btn-primary form-control" >JOIN US!</button>
+			<button type="button" class="cancelbtn">Cancel</button>
+   			</div>
+    	  </div>
+		</form>
+</div>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
